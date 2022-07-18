@@ -128,6 +128,34 @@ Make sure port 5432,5672,15672,8080,8081,8082,8083,8084 are not in use
 | GET | `/admin/last-10-advert` | Brings up 10 last ads.. |
 | GET | `/admin/passive` | Brings up 10 passive ads.. |
 | GET | `/admin/review` | Brings up 10 in-review ads.. |
+ 
+ 
+### Diagram
+
+  ![1](https://user-images.githubusercontent.com/44724790/179455922-778b84ac-22b5-4284-853f-bf70e0a01650.PNG)
+
+  
+## Postman Screenshots
+
+### Sign up
+
+![2](https://user-images.githubusercontent.com/44724790/179456011-eae43205-355d-4541-b381-1edabf73b035.PNG)
+
+### Login
+
+![3](https://user-images.githubusercontent.com/44724790/179456028-f3d72ac1-05e4-4574-8327-5b380a377eae.PNG)
+
+### Create Address
+
+  ![4](https://user-images.githubusercontent.com/44724790/179456079-c629786e-2276-4eb8-a8f3-84f16f6bd90a.PNG)
+ 
+### Create Property
+
+  ![5](https://user-images.githubusercontent.com/44724790/179456136-f8b12438-1f79-40d4-a02e-23d23c93723c.PNG)
+
+### Create Advert
+  ![6](https://user-images.githubusercontent.com/44724790/179456159-cbca3c6c-b919-4651-b0b5-153d02471016.PNG)
+
   
 
 
