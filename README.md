@@ -50,11 +50,86 @@ Make sure port 5432,5672,15672,8080,8081,8082,8083,8084 are not in use
   Admin          -> http://localhost:8084/swagger-ui.html
   ```
   
-  
-  
-### Arcitechture diagram
+#### Gateway-controller
+###
+```http
+  path : localhost:8080/login 
+```
 
-### ER diagram
+| Parameter | Access Point    | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `login/` | Creates a token for the user whose email and password are given |
+
+ #### Emlakjet-controller
+```http
+  path : localhost:8080/advert-api/**
+```
+
+| Parameter | Access Point    | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `address/` | Create an address. |
+| GET | `address/{id}` | It brings the ad according to the given advert number. |
+| GET | `addresses` | Brings up all the addresses. |
+
+| Parameter | Access Point     | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `/property` | Create an property |
+| GET | `/properties` | Brings up all the properties. |
+| GET | `/property/{id}` | It brings the property according to the id number. |
+
+| Parameter | Access Point     | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `/advert` | Create an advert. |
+| PUT | `/advert/{advertId}` | It allows to update the advert according to the id number. |
+| GET | `/advert/{advertNo}` | It brings the advert according to the id number. |
+| GET | `/advert/get10` | Brings up 10 active ads.. |
+
+| Parameter | Access Point     | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `/signup` | It allows registration. |
+| GET | `/user/{userId}` | It brings the user according to the id number. |
+| GET | `/users` | Brings up all the users. |
+
+#### Banner-controller
+###
+```http
+  path : localhost:8080/banner-api/**
+```
+
+| Parameter | Access Point    | Explanation                |
+| :-------- | :------- | :------------------------- |
+| POST | `/banner` | Create an banner. |
+| GET | `/banners` | Brings up all the baners. |
+
+#### Report-controller
+###
+```http
+  path : localhost:8080/report-api/**
+```
+
+| Parameter | Access Point     | Explanation                |
+| :-------- | :------- | :------------------------- |
+| PUT | `/report/{advertId}` | It allows to update the generated reports. |
+| GET | `/report/{id}` |  It brings the report according to the advert id. |
+
+
+#### Admin-controller
+###
+```http
+  path : localhost:8080/admin-api/**
+```
+| Parameter | Access Point     | Explanation                |
+| :-------- | :------- | :------------------------- |
+| PUT | `/admin/make-active/{id}` | Activates the advert according to the given advert id. |
+| PUT | `/admin/make-passive/{id}` | Makes advert passive according to the given advert id. |
+| GET | `/admin/{userId}` |  It brings the user according to the id number. |
+| GET | `/admin/active` | Brings up 10 active ads.. |
+| GET | `/admin/all-advert` | Brings up all the adverts. |
+| GET | `/admin/last-10-advert` | Brings up 10 last ads.. |
+| GET | `/admin/passive` | Brings up 10 passive ads.. |
+| GET | `/admin/review` | Brings up 10 in-review ads.. |
+  
+
 
 ### Considerations During the Writing of the Project
 
@@ -73,6 +148,8 @@ Make sure port 5432,5672,15672,8080,8081,8082,8083,8084 are not in use
 - Design patterns can be used.
 - The unit test should be developed by writing new tests for all services and all cases of these services' methods.
 - A suitable frontend can be written.
+
+
 
 
 
