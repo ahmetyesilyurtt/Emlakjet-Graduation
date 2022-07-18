@@ -129,10 +129,7 @@ Make sure port 5432,5672,15672,8080,8081,8082,8083,8084 are not in use
 | GET | `/admin/passive` | Brings up 10 passive ads.. |
 | GET | `/admin/review` | Brings up 10 in-review ads.. |
  
- 
-### Diagram
 
-  ![1](https://user-images.githubusercontent.com/44724790/179455922-778b84ac-22b5-4284-853f-bf70e0a01650.PNG)
 
   
 ## Postman Screenshots
